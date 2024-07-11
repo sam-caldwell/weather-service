@@ -263,10 +263,10 @@ func TestGetTemperature(t *testing.T) {
 		temp     float64
 		expected string
 	}{
-		{25.0, "Hot (77°F / 25°C)"},
-		{15.0, "Moderate (59°F / 15°C)"},
-		{5.0, "Cold (41°F / 5°C)"},
-		{-5.0, "Cold (23°F / -5°C)"},
+		{25.0, "Hot (77F / 25C)"},
+		{15.0, "Moderate (59F / 15C)"},
+		{5.0, "Cold (41F / 5C)"},
+		{-5.0, "Cold (23F / -5C)"},
 	}
 
 	for _, tc := range testCases {
