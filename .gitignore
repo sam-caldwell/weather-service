@@ -1,0 +1,40 @@
+# Jetbrains files...
+.idea/
+*.iml
+# ---
+
+# Obsidian/excalidraw files
+.obsidian
+
+
+# The directory where we build artifacts...
+build/
+**/builds/
+bin/
+*.log
+# ---
+
+# ---.DS_Store
+.DS_Store
+
+# Snyk cache
+.dccache
+
+# Go Environment
+pkg/
+
+*.mp4
+*.wav
+*.mpg
+*.mpeg
+*.avi
+*.cpio
+*.bz
+*.bzip
+*.gzip
+*.xz
+*.exe
+*.bin
+*.o
+
+logs.txt
