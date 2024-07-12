@@ -130,7 +130,7 @@ func weatherHandler(w http.ResponseWriter, r *http.Request) {
 		"  Temperature : %s", weatherCondition, temperatureDesc)
 
 	// Send the response
-	w.Header().Set("Content-Type", "text/plain")
+	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
 	if _, err = fmt.Fprintf(w, httpResponse); err != nil {
 		log.Printf("error writing the response: %v", err)
 	}
@@ -141,11 +141,11 @@ func weatherHandler(w http.ResponseWriter, r *http.Request) {
 // But we'll convert it to Fahrenheit as well for grins.
 func getTemperature(temp float64) string {
 	if temp > 24 {
-		return fmt.Sprintf("Hot (%.0fF / %.0fC)", celsiusToFahrenheit(temp), temp)
+		return fmt.Sprintf("Hot (%.0f°F / %.0f°C)", celsiusToFahrenheit(temp), temp)
 	} else if temp < 10 {
-		return fmt.Sprintf("Cold (%.0fF / %.0fC)", celsiusToFahrenheit(temp), temp)
+		return fmt.Sprintf("Cold (%.0f°F / %.0f°C)", celsiusToFahrenheit(temp), temp)
 	} else {
-		return fmt.Sprintf("Moderate (%.0fF / %.0fC)", celsiusToFahrenheit(temp), temp)
+		return fmt.Sprintf("Moderate (%.0f°F / %.0f°C)", celsiusToFahrenheit(temp), temp)
 	}
 }
 
